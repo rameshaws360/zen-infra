@@ -1,5 +1,4 @@
-# Initial dev environment eks setup 
-
+# Initial dev environment eks setup for pharma project
 data "aws_caller_identity" "current" {}
 
 module "vpc" {
