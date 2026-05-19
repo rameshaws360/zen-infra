@@ -94,7 +94,7 @@ jobs:
         run: exit 1
 
       - name: Release state lock on failure
-        if: always() || cancelled()
+        if: failure() || cancelled()
         run: |
           aws s3 rm s3://${{ vars.TF_STATE_BUCKET }}/envs/dev/terraform.tfstate.tflock || true
 
